@@ -1,0 +1,172 @@
+{
+  "name": "yiisoft/yii2-app-basic",
+  "description": "Yii 2 Basic Project Template",
+  "keywords": [
+    "yii2",
+    "framework",
+    "basic",
+    "project template"
+  ],
+  "homepage": "https://www.yiiframework.com/",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+    "forum": "https://www.yiiframework.com/forum/",
+    "wiki": "https://www.yiiframework.com/wiki/",
+    "irc": "irc://irc.freenode.net/yii",
+    "source": "https://github.com/yiisoft/yii2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/rmrevin/yii2-minify-view"
+    },
+    {
+      "type": "git",
+      "url": "https://gitverse.ru/warkhosh/assist.git"
+    },
+    {
+      "type": "git",
+      "url": "https://gitverse.ru/warkhosh/data-provider.git"
+    },
+    {
+      "type": "git",
+      "url": "https://gitverse.ru/warkhosh/singleton.git"
+    },
+    {
+      "type": "git",
+      "url": "https://gitverse.ru/warkhosh/config.git"
+    },
+    {
+      "type": "git",
+      "url": "https://gitverse.ru/warkhosh/storage.git"
+    },
+    {
+      "type": "git",
+      "url": "https://gitverse.ru/warkhosh/component.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/warkhosh/menu.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/warkhosh/log.git"
+    },
+    {
+      "type": "git",
+      "url": "https://gitverse.ru/warkhosh/variable.git"
+    },
+    {
+      "type": "git",
+      "url": "https://gitverse.ru/warkhosh/exception.git"
+    }
+  ],
+  "require": {
+    "php": ">=8.0.0",
+    "yiisoft/yii2": "~2.0.14",
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "symfony/http-client": "^7.3",
+    "symfony/mailer": "^7.3",
+    "symfony/mime": "^7.3",
+    "yiisoft/yii2-symfonymailer": "^4.0",
+    "yiisoft/yii2-swiftmailer": "~2.0.0",
+    "rmrevin/yii2-minify-view": "^2.0",
+    "yiisoft/yii2-redis": "~2.0.0",
+    "kenjebaev/yii2-compare": "*",
+    "devanych/yii2-cart": "*",
+    "himiklab/yii2-ipgeobase-component": "*",
+    "samdark/sitemap": "^2.2",
+    "guzzlehttp/guzzle": "^7.0",
+    "mrclay/minify": "^3.0",
+    "yiisoft/yii2-debug": "^2.1",
+    "symfony/polyfill-php73": "^1.22",
+    "foolz/sphinxql-query-builder": "dev-master",
+    "unisender/api-wrapper": "^1.6",
+    "skeeks/yii2-assets-auto-compress": "*",
+    "warkhosh/assist": "dev-master",
+    "warkhosh/data-provider": "dev-master",
+    "warkhosh/singleton": "dev-master",
+    "warkhosh/config": "dev-master",
+    "warkhosh/storage": "dev-master",
+    "warkhosh/component": "dev-master",
+    "warkhosh/menu": "dev-master",
+    "warkhosh/log": "dev-master",
+    "warkhosh/variable": "dev-master",
+    "warkhosh/exception": "dev-master",
+    "ext-simplexml": "*",
+    "ext-xmlreader": "*",
+    "ext-mbstring": "*",
+    "ext-iconv": "*",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-pdo": "*"
+  },
+  "require-dev": {
+    "yiisoft/yii2-gii": "~2.0.0",
+    "yiisoft/yii2-faker": "~2.0.0",
+    "codeception/verify": "~0.3.1",
+    "codeception/specify": "~0.4.3",
+    "laravel/pint": "^1.13"
+  },
+  "autoload": {
+    "classmap": [
+      "vendor/"
+    ],
+    "psr-4": {
+      "vendor\\": "vendor/"
+    },
+    "files": [
+      "vendor/swiftmailer/swiftmailer/lib/dependency_maps/cache_deps.php",
+      "vendor/swiftmailer/swiftmailer/lib/dependency_maps/mime_deps.php",
+      "vendor/swiftmailer/swiftmailer/lib/dependency_maps/message_deps.php",
+      "vendor/swiftmailer/swiftmailer/lib/dependency_maps/transport_deps.php",
+      "vendor/swiftmailer/swiftmailer/lib/preferences.php"
+    ]
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "yii\\composer\\Installer::postInstall",
+      "bash post-install.sh"
+    ],
+    "post-create-project-cmd": [
+      "yii\\composer\\Installer::postCreateProject",
+      "yii\\composer\\Installer::postInstall"
+    ],
+    "post-update-cmd": [
+      "bash post-install.sh"
+    ]
+  },
+  "extra": {
+    "yii\\composer\\Installer::postCreateProject": {
+      "setPermission": [
+        {
+          "runtime": "0777",
+          "web/assets": "0777",
+          "yii": "0755"
+        }
+      ]
+    },
+    "yii\\composer\\Installer::postInstall": {
+      "generateCookieValidationKey": [
+        "config/web.php"
+      ]
+    }
+  }
+}

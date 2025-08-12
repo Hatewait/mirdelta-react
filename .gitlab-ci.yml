@@ -1,0 +1,4 @@
+include:
+  - project: tradicia-k/devops
+    file: .gitlab-ci.yml
+    ref: master
