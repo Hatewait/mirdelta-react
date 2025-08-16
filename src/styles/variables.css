@@ -1,0 +1,21 @@
+:root {
+  /* colors */
+  --white: #ffffff;
+  --color-fg: #1d1d1b;
+  --yellow: #fbba00;
+  --dark-blue: #4e6280;
+  --grey-accent: #434040;
+  --color-border: rgba(78, 98, 128, 0.23);
+  --color-header-top: #1d1d1b;
+  --grey-light: #E6E6E6;
+  --error: #F67361;
+  --black: #1D1D1B;
+  --grey-7: #68707A;
+  --grey-6: #9CA4AD;
+  --grey-4: #E5E8EE;
+
+  /* fonts */
+  --font-main: 'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-secondary: "Yanone Kaffeesatz", sans-serif;
+}
+

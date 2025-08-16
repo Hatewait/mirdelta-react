@@ -1,0 +1,77 @@
+@media (min-width: 992px) {
+  .catalog-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(var(--header-height) + var(--catalog-overlap));
+    width: min(920px, calc(100vw - 32px));
+    z-index: 1050;
+    translate: 0 0;
+    transition: opacity .18s ease, translate .18s ease;
+    padding: 20px;
+    background: var(--yellow);
+    border-radius: 8px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .catalog-menu__grid {
+    --gap: 8px;
+    --cols: 4;
+    --col: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols)); /* это будет ширина карточки */
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+
+  .catalog-menu__item,
+  .catalog-menu__stub {
+    flex: 0 0 var(--col);   /* НЕ задаём фиксированную width! */
+    min-height: 140px;
+    border-radius: 14px;
+  }
+
+  .catalog-menu__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px 0;
+    background: #fff;
+    color: #222;
+    text-decoration: none;
+
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    box-shadow:
+            0 1px 0 rgba(0, 0, 0, 0.04),
+            0 1px 8px rgba(0, 0, 0, 0.06);
+
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+
+  /* Скрывать все карточки (в т.ч. заглушку), которые в 5-м ряду и ниже */
+  .catalog-menu__grid > *:nth-child(n+17) {
+    display: none;
+  }
+
+  .catalog-menu__pic {
+    width: 165px;
+    height: 67px;
+    display: grid;
+    place-items: center;
+  }
+  .catalog-menu__pic img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .catalog-menu__stub {
+    background: #e9ecef;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    flex: 1 0 0;          /* растягиваем остаток строки */
+    min-width: var(--col);/* но не меньше «одной карточки» */
+  }
+}
+
