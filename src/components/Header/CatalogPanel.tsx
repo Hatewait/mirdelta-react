@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './CatalogPanel.css';
 import type { ButtonRef } from './Header.types.ts';
 import { CATEGORIES } from '../../constants/nav.ts';
+import { Link } from 'react-router-dom';
 
 type CatalogPanelProps = {
   buttonRef: ButtonRef;
@@ -37,12 +38,12 @@ const CatalogPanel: React.FC<CatalogPanelProps> = ({ buttonRef, isOpen, handleCl
           {
             CATEGORIES.map(({title, type, src}) =>
               type === 'category' ? (
-                <a href="#" className="catalog-menu__item">
+                <Link to="#" className="catalog-menu__item">
                   <div className="catalog-menu__pic">
                     <img src={src} alt={title} />
                   </div>
                   <span className="catalog-menu__title text-2 text-center">{title}</span>
-                </a>
+                </Link>
               ) : (
                 <div className="catalog-menu__stub" aria-hidden="true">
                   <img src={src} alt="Banner" />

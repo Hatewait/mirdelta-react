@@ -203,7 +203,6 @@ img, svg {
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
-  text-transform: uppercase;
 }
 
 .title-3 {
@@ -384,7 +383,6 @@ img, svg {
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
-    text-transform: uppercase;
   }
 
   .title-3 {
@@ -425,3 +423,101 @@ img, svg {
 
 
 /*Text end */
+
+/* buttons */
+.button-main, .button-secondary {
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.button-main {
+  background-color: var(--dark-blue);
+  display: flex;
+  color: var(--white);
+  border-color: transparent;
+}
+
+.button-main:hover {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+}
+
+.button-secondary {
+  background-color: var(--white);
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+}
+
+.button-secondary:hover {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+  border-color: var(--yellow);
+}
+.button-secondary_2, .button-secondary_1 {
+  border-color: transparent;
+}
+.button-secondary_2:hover {
+  color: var(--white);
+  background-color: var(--dark-blue);
+}
+
+.button-compare {
+  padding: 8px 28px;
+  background-color: var(--grey-light);
+  width: fit-content;
+  border-radius: 8px;
+  border: 1px solid var(--dark-blue);
+  background: var(--grey-light, #E6E6E6);
+}
+
+.button-compare svg:nth-of-type(2) {
+  display: none;
+}
+
+.button-compare.active {
+  background-color: var(--yellow);
+}
+
+.button-compare.active svg:nth-of-type(1) {
+  display: none;
+}
+
+.button-compare.active svg:nth-of-type(2) {
+  display: block;
+}
+
+.button-file {
+  border: none;
+  background-color: transparent;
+}
+
+.button-file.active svg path {
+  fill: var(--yellow);
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .button-main, .button-secondary {
+
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  .button-main, .button-secondary {
+    font-size: 18px;
+  }
+}
+
+/* buttons end */

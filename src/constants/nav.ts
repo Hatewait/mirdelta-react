@@ -3,7 +3,7 @@ import { ROUTES } from './routes.ts';
 
 export const MAIN_NAV: HeaderNavItem[] = [
   { text: 'Продукция', isButton: true },
-  { text: 'Оборудование в деле', linkTo: ROUTES.catalog },
+  { text: 'Оборудование в деле', linkTo: ROUTES.news },
   { text: 'Сервис',              linkTo: ROUTES.service },
   { text: 'Карта филиалов',      linkTo: ROUTES.branches },
   { text: 'О бренде',            linkTo: ROUTES.brand },

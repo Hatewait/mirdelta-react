@@ -1,0 +1,35 @@
+footer {
+  padding: 60px 0;
+}
+
+.footer-logo {
+  width: 90px;
+  height: 40px;
+}
+
+.footer__right-part {
+
+}
+
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    width: 156px;
+    height: 70px;
+  }
+
+  .footer__right-part {
+    column-gap: 24px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer__right-part {
+    column-gap: 64px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  footer {
+    padding: 80px 0;
+  }
+}
