@@ -143,10 +143,10 @@ img, svg {
 }
 
 .headline-1 {
-  font-size: 52px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
-  line-height: 98%;
+  line-height: 120%;
 }
 
 .headline-2 {
@@ -199,7 +199,7 @@ img, svg {
 }
 
 .title-2 {
-  font-size: 17px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
@@ -213,9 +213,9 @@ img, svg {
 }
 
 .text-1 {
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
 }
 
@@ -252,18 +252,22 @@ img, svg {
   line-height: 109%; /* 16.35px */
 }
 
+.section-offset {
+  margin-bottom: 40px;
+}
+
 
 /* Tablet */
 
 @media screen and (min-width: 768px) {
   .hero {
-    font-size: 70px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 600;
     line-height: 110%;
   }
   .headline-1 {
-    font-size: 52px;
+    font-size: 42px;
     font-style: normal;
     font-weight: 700;
     line-height: 98%;
@@ -308,6 +312,17 @@ img, svg {
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;
+  }
+
+  .title-2 {
+    font-size: 15px;
+  }
+
+  .text-1 {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
     line-height: normal;
   }
 
@@ -419,6 +434,10 @@ img, svg {
     font-weight: 400;
     line-height: normal;
   }
+
+  .section-offset {
+    margin-bottom: 60px;
+  }
 }
 
 
@@ -521,3 +540,9 @@ img, svg {
 }
 
 /* buttons end */
+
+@media (min-width: 1400px) {
+  .section-offset {
+    margin-bottom: 80px;
+  }
+}

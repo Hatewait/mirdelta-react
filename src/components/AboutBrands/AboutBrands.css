@@ -1,0 +1,29 @@
+.about-brand__title {
+  width: 100%;
+}
+
+.about-brand__card {
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(103, 169, 204, 0.50);
+}
+
+@media (min-width: 768px) {
+  .about-brand__title {
+    max-width: 215px;
+  }
+}
+@media (min-width: 992px) {
+  .about-brand__title {
+    max-width: 260px;
+  }
+}
+@media (min-width: 1200px) {
+  .about-brand__title {
+    max-width: 354px;
+  }
+}
+@media (min-width: 1400px) {
+  .about-brand__title {
+    max-width: 311px;
+  }
+}

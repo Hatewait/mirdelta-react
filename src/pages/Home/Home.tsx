@@ -1,12 +1,15 @@
 import React from 'react';
+import AboutBrands from '../../components/AboutBrands/AboutBrands';
+import Features from '../../components/Features/Features';
 
 const Home: React.FC = () => {
-    return (
-        <section className="container">
-            <h1>Главная</h1>
-            <p>Здесь будет контент главной страницы.</p>
-        </section>
-    );
+  return (
+    <>
+      <div className="section-offset">Swiper slider</div>
+      <AboutBrands />
+      <Features />
+    </>
+  );
 };
 
 export default Home;

@@ -1,0 +1,26 @@
+.features {
+  padding: 40px 0;
+  background: var(--grey-light);
+}
+
+.feature__title {
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .feature__title {
+    height: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .features {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .features {
+    padding: 80px 0;
+  }
+}
